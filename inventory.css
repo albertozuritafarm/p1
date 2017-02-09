@@ -1,0 +1,267 @@
+@import "http://fonts.googleapis.com/css?family=Fauna+One|Muli";
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+  font-size:10px;
+  margin-top:20px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+ td input {
+  width:70px;;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0B75AF;
+	font-family:'Fauna One',serif;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: pink;
+}
+
+.active {
+    background-color: pink;
+}
+	  
+ nav {
+    
+    max-width: 100px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+nav li{
+
+border-right:none;
+}
+
+
+.sidebar {
+margin-top: 45px;
+float: left;
+}
+
+.sidebar2{
+float: right;
+width: 20%;
+padding: 0 10px 0 20px;
+}
+
+.main{
+float: left;
+background-color: white;
+width: 100%;
+padding: 0 20px 0 20px;
+margin-top:50px;
+}
+#results{
+margin-top:50px;
+background:yellow;
+
+color: blue;
+}
+
+.pos {
+color: red;
+}
+#form {
+background-color:#fff;
+color:#123456;
+box-shadow:0 1px 1px 1px #123456;
+font-weight:400;
+/*width:350px;*/
+
+float:right;
+height:500px
+}
+#form div {
+padding:10px 0 0 30px
+}
+h3 {
+margin-top:0;
+color:#fff;
+/*background-color:#3C599B;*/
+/*background-color:#FF00FF;*/
+background-color:#0B75AF;
+text-align:center;
+width:100%;
+height:50px;
+padding-top:30px
+}
+#mainform {
+width:960px;
+margin:50px auto;
+padding-top:20px;
+font-family:'Fauna One',serif
+}
+input {
+width:30%;
+height:10px;
+margin-top:10px;
+border-radius:3px;
+padding:2px;
+box-shadow:0 1px 1px 0 #123456
+}
+input[type=button] {
+background-color:#3C599B;
+border:1px solid #fff;
+font-family:'Fauna One',serif;
+font-weight:700;
+font-size:18px;
+color:#fff
+}
+#results td, tr, th, table{
+font-family:'Fauna One',serif;
+font-size:16px;
+color:black;
+}
+#results a{
+color: #696e77;
+text-decoration:none;
+font-family:'Fauna One',serif;
+float:right;
+}
+#billing{
+
+}
+#client_data{
+
+}
+#consignee{
+
+
+}
+
+#t1{
+float:left;
+}
+#t0{
+float:left;
+}
+#t2{
+float:left;
+}
+#t3{
+float:left;
+}
+
+#t4{
+float:left;
+padding-top:30px;
+}
+
+#t5{
+float:left;
+padding-top:30px;
+}
+
+#t6{
+float:left;
+padding-top:30px;
+
+}
+
+#newrow{
+
+
+}
+
+#firstName{
+float:left;
+padding-right:30px;
+color:#70ad47;
+font-size:12px;
+}
+#lastName{
+float:left;
+padding-right:30px;
+color:#70ad47;
+font-size:12px;
+}
+#salesRepID{
+float:left;
+padding-left:30px;
+color:#70ad47;
+font-size:12px;
+}
+#timezone{
+padding-left:10px;
+float:left;
+color:#70ad47;
+font-size:12px;
+}
+#client{
+float:left;
+padding-left:20px;
+color:#70ad47;
+font-size:12px;
+}
+
+#hours_difference{
+float:left;
+padding-left:30px;
+color:#70ad47;
+font-size:12px;
+
+}
+#real_local_hour{
+float:left;
+padding-left:0px;
+color:#70ad47;
+font-size:12px;
+
+}
+#closed_office_hour{
+float:left;
+padding-left:0px;
+color:#70ad47;
+font-size:12px;
+
+}
+#contact_action{
+float:left;
+padding-left:0px;
+color:#70ad47;
+font-size:12px;
+
+}
+#inventory{
+width:100%;
+
+}

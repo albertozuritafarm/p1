@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link href="inventory.css" rel="stylesheet">
+    <script data-require="angular.js@1.2.x" src="http://code.angularjs.org/1.2.15/angular.js" data-semver="1.2.15"></script>
+    <script src="app.js"></script>
+  </head>
+  
+  
+  
+
+  <body ng-controller="MainCtrl">
+  <h1>Inventory</h1>
+	<table>
+    <tr ng-repeat="product in products" ng-show="product.productID != null">
+      <td>{{ product.productID }}</td>
+	  <td>{{ product.productname }}</td>
+      <td><input type="number" ng-model="quantity" placeholder="product_{{product.productID}}" 
+	  ng-change="changeQuantity(product.productID, product.productname, quantity)"></td>
+    </table>
+	<table>
+	<tr ng-repeat="f in formData" >
+    <td>{{ f.product_name }}</td><td>{{ f.quantity }}</td>
+	</tr>
+	</table>
+	
+	<div id="results">{{ formData }}</div>
+
+  </body>
+
+</html>

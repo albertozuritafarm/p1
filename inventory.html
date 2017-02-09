@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link href="inventory.css" rel="stylesheet">
+<script src="DB_INVENTORY_UPDATE_DATA.js"></script>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrlProvider', function($scope, $http) {
+$http.get("db_provider.php").then(function(response) {
+      //$scope.myData = response.data;// one piece of data
+	  
+	  $scope.myData = response;// all array data	  
+	  });
+	  });
+app.controller('myCtrl', function($scope, $http) {
+$http.get("db_shipping_data.php").then(function(response) {
+      //$scope.myData = response.data;// one piece of data
+	  
+	  $scope.myData = response;// all array data	  
+	  });
+	  });
+app.controller('myCtrlBill', function($scope, $http) {
+$http.get("db_billing_client.php").then(function(response) {
+      //$scope.myData = response.data;// one piece of data
+	  
+	  $scope.myData = response;// all array data	  
+	  });
+	  });
+app.controller('myCtrlShip', function($scope, $http) {
+$http.get("db_shipping_client.php").then(function(response) {
+      //$scope.myData = response.data;// one piece of data
+	  
+	  $scope.myData = response;// all array data	  
+	  });
+	  });
+app.controller('myCtrlTimezone', function($scope, $http) {
+$http.get("db_timezone.php").then(function(response) {
+      //$scope.myData = response.data;// one piece of data
+	  
+	  $scope.myData = response;// all array data	  
+	  });
+	  });
+app.controller('myCtrlContactby', function($scope, $http) {
+$http.get("db_contact_by.php").then(function(response) {
+      //$scope.myData = response.data;// one piece of data
+	  
+	  $scope.myData = response;// all array data	  
+	  });
+	  });
+app.controller('myCtrlSalesrep', function($scope, $http) {
+$http.get("db_sales_rep.php").then(function(response) {
+      //$scope.myData = response.data;// one piece of data
+	  
+	  $scope.myData = response;// all array data	  
+	  });
+	  });
+	  
+app.controller('myCtrlSalesRepShip', function($scope, $http) {
+$http.get("db_sales_rep_ship_client.php").then(function(response) {
+      //$scope.myData = response.data;// one piece of data
+	  
+	  $scope.myData = response;// all array data	  
+	  });
+	  });
+app.controller('myCtrlInventory', function($scope, $http) {
+$http.get("db_inventory.php").then(function(response) {
+      
+	  //alert(response.data);
+      $scope.myData = response.data; // get data from json
+	
+	    
+              angular.forEach($scope.myData,function($value,$key){
+			  //alert($value.productname);
+			  //alert($value.productID);
+			  });
+	 
+	  $scope.myData = response;// all array data	  
+	  });
+	  
+	 
+	  });
+
+</script>
+
+</head>
+<body>
+
+<ul>
+  <li><a  href="#home">HOME</a></li>
+  <li><a  href="#news">CLIENTS</a></li>
+  <li><a class="active" href="#contact">INVENTORY</a></li>
+  <li><a href="../orders/orders.html">ORDERS</a></li>
+  <li style="float:right"><a href="#about">ABOUT</a></li>
+</ul>
+
+
+	  
+	  
+	  
+	  <div class = "main"  ng-controller="myCtrl" ng-app="myApp">
+	  <h1> INVENTORY</h1>
+	  <div id="inventory" ng-controller="myCtrlInventory">
+	  
+	  <div id="t6">
+	  <form>
+	  <div ng-repeat="data in myData" ng-if="data.length">
+	  <table>
+	  <tr ng-repeat="x in data" ng-if="!x.length">
+	  <td>{{x.inventoryID}}</td>
+	  <td>{{x.source}}</td>
+	  <td>{{x.productname}}</td>
+	  <td>{{x.quantity}}</td>
+	  <td>{{x.productID}}</td>
+	  <td> <input type="text" id="quantity"> </td> 
+	  <!--<td><input type="text" id="productid"  type="text"></td>-->
+	  <td><input type="number" ng-model="quantity" placeholder="product_{{x.productID}}" 
+	  ng-change="changeQuantity(x.productID, quantity)"></td>
+	  <td><a href=update.php?x={{x.productID}}>add product</a></td>
+	  </tr>
+	  </table>
+	  </div>
+	  <div>
+	  <div> <input id="submit" type="button" value="add product"></div>
+	 
+	  <div><input type="submit" value="grab products">
+	  
+	  </form>
+	  </div>
+	  </div>
+	  </div>
+      
+	  <div id="results">RESULTS</div>
+
+     
+	  </div>
+
+
+</body>
+</html>
